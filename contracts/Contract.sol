@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.6;
 
-import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "./IERC721.sol";
+import "./IERC20.sol";
 
 contract MarketPlace {
   IERC20 immutable METABLOCK;
@@ -64,4 +64,3 @@ contract MarketPlace {
     emit BidAccepted(currentBid.bidder, _nftAddress, _tokenId, currentBid.amount, block.timestamp);
   }
 }
-
